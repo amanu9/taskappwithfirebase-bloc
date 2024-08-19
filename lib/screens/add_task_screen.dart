@@ -47,9 +47,12 @@ class AddTaskScreen extends StatelessWidget {
           children: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: const Text('cancel'),
+              child: const Text('cancel',style: TextStyle(color: Colors.red),),
             ),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueAccent,
+              ),
               onPressed: () {
                 var task = Task(
                   title: titleController.text,
@@ -62,7 +65,7 @@ class AddTaskScreen extends StatelessWidget {
                  // can also use like this BlocProvider.of<TasksBloc>(context).add(AddTask(task: task));
                 Navigator.pop(context);
               },
-              child: const Text('Add'),
+              child: const Text('Add',style: TextStyle(color: Colors.white),),
             ),
           ],
         ),

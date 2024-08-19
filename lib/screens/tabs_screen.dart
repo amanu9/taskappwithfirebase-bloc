@@ -50,11 +50,14 @@ class _TabsScreenState extends State<TabsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(_pageDetails[_selectedPageIndex]['title']),
         actions: [
           IconButton(
             onPressed: () => _addTask(context),
-            icon: const Icon(Icons.add),
+            icon: const Icon(Icons.add,color: Colors.blue,
+            
+            size: 30,),
           )
         ],
       ),
@@ -64,7 +67,8 @@ class _TabsScreenState extends State<TabsScreen> {
           ? FloatingActionButton(
               onPressed: () => _addTask(context),
               tooltip: 'Add Task',
-              child: const Icon(Icons.add),
+              child:  Icon(Icons.add),
+              backgroundColor: Colors.blueAccent,
             )
           : null,
       bottomNavigationBar: BottomNavigationBar(
@@ -74,12 +78,15 @@ class _TabsScreenState extends State<TabsScreen> {
             _selectedPageIndex = index;
           });
         },
+        backgroundColor: Colors.blueAccent, // Set your desired background color here
+        selectedItemColor: Colors.white, // Optional: Set the color of the selected item
+        unselectedItemColor: Colors.black,
         items: const [
           BottomNavigationBarItem(
-              icon: Icon(Icons.incomplete_circle_sharp),
+              icon: Icon(Icons.note_add),
               label: 'Pending Tasks'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.done), label: 'Completed Tasks'),
+              icon: Icon(Icons.task_alt_sharp), label: 'Completed Tasks'),
           BottomNavigationBarItem(
               icon: Icon(Icons.favorite), label: 'Favorite Tasks'),
         ],

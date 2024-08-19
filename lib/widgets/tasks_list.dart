@@ -21,7 +21,8 @@ class TasksList extends StatelessWidget {
                   value: task.id,
                   headerBuilder: (context, isOpen) => TaskTile(task: task),
                   body: ListTile(
-                    title: SelectableText.rich(TextSpan(children: [
+                    title: SelectableText.rich(TextSpan(
+                      children: [
                       const TextSpan(
                         text: 'Text\n',
                         style: TextStyle(
@@ -36,9 +37,16 @@ class TasksList extends StatelessWidget {
                         ),
                       ),
                       TextSpan(text: task.description),
-                    ])),
-                  )))
+
+                      
+                    ]
+                    
+                    )),
+                    
+                  )
+                  ))
               .toList(),
+              
               
         ),
       ),

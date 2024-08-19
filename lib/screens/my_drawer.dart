@@ -21,7 +21,7 @@ class MyDrawer extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 20),
               color: Colors.grey,
               child: Text(
-                'Task Drawer',
+                'Task App',
                 style: Theme.of(context).textTheme.headlineSmall,
               ),
             ),
@@ -32,11 +32,12 @@ class MyDrawer extends StatelessWidget {
                     TabsScreen.id,
                   ),
                   child: ListTile(
-                    leading: const Icon(Icons.folder_special),
-                    title: const Text('My Tasks'),
+                    leading: const Icon(Icons.folder,size: 30,),
+                    title: const Text('My Tasks',style: TextStyle(fontSize: 20)),
                     trailing: Text(
                         '${state.pendingTasks.length} | ${state.completedTasks.length}'),
                   ),
+                 
                 );
               },
             ),
@@ -49,8 +50,9 @@ class MyDrawer extends StatelessWidget {
                     RecycleBin.id,
                   ),
                   child: ListTile(
-                    leading: const Icon(Icons.delete),
-                    title: const Text('Bin'),
+                    leading: const Icon(Icons.delete,color: Colors.red,size: 30,),
+                    title: const Text('Bin',style: TextStyle(fontSize: 20),
+                    ),
                     trailing: Text('${state.removedTasks.length}'),
                   ),
                 );
@@ -69,7 +71,7 @@ class MyDrawer extends StatelessWidget {
                 );
               },
             ),
-            const SizedBox(height: 40,),
+            const SizedBox(height: 300,),
              ListTile(
               
              

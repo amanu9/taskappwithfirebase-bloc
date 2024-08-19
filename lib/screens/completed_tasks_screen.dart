@@ -18,8 +18,11 @@ class CompletedTasksScreen extends StatelessWidget {
           children: [
             Center(
               child: Chip(
+               
                 label: Text(
                   '${tasksList.length} Tasks',
+                
+                  style: TextStyle(color: Colors.black,fontSize: 16),
                 ),
               ),
             ),
