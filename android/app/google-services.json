@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "266944044018",
+    "project_id": "taskappwithblocandfireba-d7201",
+    "storage_bucket": "taskappwithblocandfireba-d7201.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266944044018:android:33a547db86816891eb696b",
+        "android_client_info": {
+          "package_name": "com.example.taskappwithblocandfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuujzopquTUXyXZgr5uHvpvzuovMrt9WI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
