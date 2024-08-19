@@ -76,8 +76,6 @@ class AddTaskScreen extends StatelessWidget {
                         );
                       },
                     );
-       
-
                 } else {
                    var task = Task(
                   title: titleController.text,

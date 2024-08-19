@@ -55,7 +55,7 @@ class _TabsScreenState extends State<TabsScreen> {
         actions: [
           IconButton(
             onPressed: () => _addTask(context),
-            icon: const Icon(Icons.add,color: Colors.blue,
+            icon: const Icon(Icons.add_circle_outlined,color: Colors.blue,
             
             size: 30,),
           )
@@ -67,8 +67,11 @@ class _TabsScreenState extends State<TabsScreen> {
           ? FloatingActionButton(
               onPressed: () => _addTask(context),
               tooltip: 'Add Task',
-              child:  Icon(Icons.add),
+              child:  Icon(Icons.add_circle_sharp,
+               size: 30,
+              ),
               backgroundColor: Colors.blueAccent,
+              
             )
           : null,
       bottomNavigationBar: BottomNavigationBar(

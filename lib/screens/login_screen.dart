@@ -55,9 +55,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
-                            "assets/images/profile.jpg",
+                            "assets/images/task.png",
                             height: MediaQuery.of(context).size.height * .2,
-                            width: MediaQuery.of(context).size.width * .3,
+                            width: MediaQuery.of(context).size.width * .4,
                           ),
                         ],
                       ),
@@ -68,14 +68,17 @@ class _LoginScreenState extends State<LoginScreen> {
                             Padding(
                               padding: const EdgeInsets.all(10.0),
                               child: TextFormField(
+                              
                                 controller: _emailController,
                                 decoration: InputDecoration(
+                                   prefixIcon: const Icon(Icons.person,size: 25,),
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(20),
                                   ),
-                                  labelText: 'Insert email',
+                                  labelText: 'Enter email',
                                 ),
                                 keyboardType: TextInputType.emailAddress,
+                                
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
                                     return 'Email is required';
@@ -90,10 +93,12 @@ class _LoginScreenState extends State<LoginScreen> {
                                 controller: _passwordController,
                                 obscureText: _obscureText,
                                 decoration: InputDecoration(
+                                  prefixIcon: const Icon(Icons.lock,size: 25,),
                                   border: OutlineInputBorder(
+
                                     borderRadius: BorderRadius.circular(20),
                                   ),
-                                  labelText: 'Insert password',
+                                  labelText: 'Enter password',
                                   suffixIcon: IconButton(
                                     onPressed: () {
                                       setState(() {
