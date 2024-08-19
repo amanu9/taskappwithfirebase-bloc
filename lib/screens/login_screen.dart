@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Column(
                     children: [
                       const Text(
-                        "Wel-come Come-Back",
+                        "Wel-come Back",
                         style:
                             TextStyle(color: Colors.black, fontSize: 20),
                       ),
@@ -98,6 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     onPressed: () {
                                       setState(() {
                                         _obscureText = !_obscureText;
+
                                       });
                                     },
                                     icon: Icon(
